@@ -12,3 +12,12 @@ fahrenheit = Math.floor(fahrenheit);
 
 // Logs the result of fahrenheit to the console
 console.log(`The temperature is ${fahrenheit} degrees Fahrenheit`);
+
+// convert celsius into Newton scale
+let newton = celsius * (33 / 100);
+
+// round down the newton temperature
+newton = Math.floor(newton);
+
+// Logs the result of newton to the console
+console.log(`The temeperature is ${newton} gradus caloris`);
