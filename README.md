@@ -1,1 +1,1 @@
-# Temperature Converter
+# Codecademy JavaScript Course
