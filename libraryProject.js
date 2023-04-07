@@ -45,6 +45,10 @@ class Book {
 
         this._ratings.push(newRating);
     }
+
+    toggleCheckOutStatus() {
+        this._isCheckedOut = !this._isCheckedOut;
+    }
 }
 
 const newBook = new Book('John', 'New Book', 34);
@@ -52,3 +56,7 @@ newBook.addRating(4);
 newBook.addRating(5);
 newBook.addRating(3);
 console.log(newBook.getAverageRating());
+
+newBook.toggleCheckOutStatus();
+newBook.toggleCheckOutStatus();
+console.log(newBook._isCheckedOut);
