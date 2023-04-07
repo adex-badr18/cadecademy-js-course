@@ -63,15 +63,15 @@ class Book extends Media {
     }
 }
 
-const newBook = new Book('John', 'New Book', 34);
-newBook.addRating(4);
-newBook.addRating(5);
-newBook.addRating(3);
-// console.log(newBook.getAverageRating());
+const historyOfEverything = new Book('Bill Bryson', 'A Short History of Nearly Everything', 544);
+historyOfEverything.addRating(4);
+historyOfEverything.addRating(5);
+historyOfEverything.addRating(3);
+// console.log(historyOfEverything.getAverageRating());
 
-newBook.toggleCheckOutStatus();
-newBook.toggleCheckOutStatus();
-// console.log(newBook._isCheckedOut);
+historyOfEverything.toggleCheckOutStatus();
+historyOfEverything.toggleCheckOutStatus();
+// console.log(historyOfEverything._isCheckedOut);
 
 
 class Movie extends Media {
