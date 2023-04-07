@@ -35,4 +35,13 @@ class Book {
         const averageRating = sum / ratingsLength;
         return averageRating;
     }
+
+    addRating(newRating) {
+        if (newRating > 5 || newRating < 1) {
+            console.log("Give a rating between 1 and 5.")
+        } else if (typeof newRating !== 'number') {
+            console.log('Numeric value expected');
+        }
+        this._ratings.push(newRating);
+    }
 }
