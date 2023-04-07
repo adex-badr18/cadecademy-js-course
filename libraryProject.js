@@ -42,6 +42,13 @@ class Book {
         } else if (typeof newRating !== 'number') {
             console.log('Numeric value expected');
         }
+
         this._ratings.push(newRating);
     }
 }
+
+const newBook = new Book('John', 'New Book', 34);
+newBook.addRating(4);
+newBook.addRating(5);
+newBook.addRating(3);
+console.log(newBook.getAverageRating());
