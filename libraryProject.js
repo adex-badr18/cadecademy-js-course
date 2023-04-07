@@ -119,10 +119,10 @@ const newMovie = new Movie('John', 'New Movie', 60);
 newMovie.addRating(5);
 newMovie.addRating(5);
 newMovie.addRating(4);
-console.log(newMovie.getAverageRating());
+// console.log(newMovie.getAverageRating());
 
 newMovie.toggleCheckOutStatus();
-console.log(newMovie._isCheckedOut);
+// console.log(newMovie._isCheckedOut);
 
 
 class CD {
@@ -154,4 +154,35 @@ class CD {
     get ratings() {
         return this._ratings;
     }
+
+    // instance methods
+    getAverageRating() {
+        const sum = this._ratings.reduce((accumulator, currentValue) => accumulator + currentValue)
+        const ratingsLength = this._ratings.length;
+        const averageRating = sum / ratingsLength;
+        return Math.round(averageRating * 10) / 10;
+    }
+
+    addRating(newRating) {
+        if (newRating > 5 || newRating < 1) {
+            console.log("Give a rating between 1 and 5.")
+        } else if (typeof newRating !== 'number') {
+            console.log('Numeric value expected');
+        }
+
+        this._ratings.push(newRating);
+    }
+
+    toggleCheckOutStatus() {
+        this._isCheckedOut = !this._isCheckedOut;
+    }
 }
+
+const newCD = new CD('John', 'New Movie', 60);
+newCD.addRating(5);
+newCD.addRating(5);
+newCD.addRating(5);
+console.log(newCD.getAverageRating());
+
+newCD.toggleCheckOutStatus();
+console.log(newCD._isCheckedOut);
