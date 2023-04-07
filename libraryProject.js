@@ -18,11 +18,16 @@ class Media {
         return this._isCheckedOut;
     }
 
+    // setter method
+    set isCheckedOut(checkOutStatus) {
+        this._isCheckedOut = checkOutStatus;
+    }
+
     // instance methods
     getAverageRating() {
-        const sum = this._ratings.reduce((accumulator, currentValue) => accumulator + currentValue)
+        const ratingsSum = this._ratings.reduce((accumulator, currentValue) => accumulator + currentValue)
         const ratingsLength = this._ratings.length;
-        const averageRating = sum / ratingsLength;
+        const averageRating = ratingsSum / ratingsLength;
         return Math.round(averageRating * 10) / 10;
     }
 
