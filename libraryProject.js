@@ -7,6 +7,7 @@ class Book {
         this._ratings = [];
     }
 
+    // getter methods
     get author() {
         return this._author;
     }
@@ -25,5 +26,13 @@ class Book {
 
     get isCheckedOut() {
         return this._isCheckedOut;
+    }
+
+    // instance methods
+    getAverageRating() {
+        const sum = this._ratings.reduce((accumulator, currentValue) => accumulator + currentValue)
+        const ratingsLength = this._ratings.length;
+        const averageRating = sum / ratingsLength;
+        return averageRating;
     }
 }
