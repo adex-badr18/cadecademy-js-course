@@ -1,3 +1,46 @@
+class Media {
+    constructor(title) {
+        this._title = title;
+        this._isCheckedOut = false;
+        this._ratings = [];
+    }
+
+    // getter methods
+    get title() {
+        return this._title;
+    }
+
+    get ratings() {
+        return this._ratings;
+    }
+
+    get isCheckedOut() {
+        return this._isCheckedOut;
+    }
+
+    // instance methods
+    getAverageRating() {
+        const sum = this._ratings.reduce((accumulator, currentValue) => accumulator + currentValue)
+        const ratingsLength = this._ratings.length;
+        const averageRating = sum / ratingsLength;
+        return Math.round(averageRating * 10) / 10;
+    }
+
+    addRating(newRating) {
+        if (newRating > 5 || newRating < 1) {
+            console.log("Give a rating between 1 and 5.")
+        } else if (typeof newRating !== 'number') {
+            console.log('Numeric value expected');
+        }
+
+        this._ratings.push(newRating);
+    }
+
+    toggleCheckOutStatus() {
+        this._isCheckedOut = !this._isCheckedOut;
+    }
+}
+
 class Book {
     constructor(author, title, pages) {
         this._author = author;
