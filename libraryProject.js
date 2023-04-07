@@ -91,14 +91,14 @@ class Movie extends Media {
     }
 }
 
-const newMovie = new Movie('John', 'New Movie', 60);
-newMovie.addRating(5);
-newMovie.addRating(5);
-newMovie.addRating(4);
-// console.log(newMovie.getAverageRating());
+const speed = new Movie('Jan den bont', 'Speed', 116);
+speed.addRating(5);
+speed.addRating(5);
+speed.addRating(4);
+// console.log(speed.getAverageRating());
 
-newMovie.toggleCheckOutStatus();
-// console.log(newMovie._isCheckedOut);
+speed.toggleCheckOutStatus();
+// console.log(speed._isCheckedOut);
 
 
 class CD extends Media {
@@ -115,6 +115,11 @@ class CD extends Media {
 
     get songs() {
         return this._songs;
+    }
+
+    // instance methods
+    shuffle() {
+
     }
 }
 
