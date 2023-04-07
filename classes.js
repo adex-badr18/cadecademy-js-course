@@ -16,6 +16,11 @@ class HospitalEmployee {
     takeVacationDays(daysOff) {
         this._remainingVacationDays -= daysOff;
     }
+
+    // static methods: can only be accessed thru the class name e.g. HospitalEmployee.generatePassword
+    static generatePassword() {
+        return Math.floor(Math.random() * 10000);
+    }
 }
 
 class Nurse extends HospitalEmployee {
