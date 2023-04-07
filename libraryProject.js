@@ -125,3 +125,33 @@ newMovie.toggleCheckOutStatus();
 console.log(newMovie._isCheckedOut);
 
 
+class CD {
+    constructor(artist, title, songs) {
+        this._artist = artist;
+        this._title = title;
+        this._songs = songs;
+        this._isCheckedOut = false;
+        this._ratings = []
+    }
+
+    // getters
+    get artist() {
+        return this._artist;
+    }
+
+    get title() {
+        return this._title;
+    }
+
+    get songs() {
+        return this._songs;
+    }
+
+    get isCheckedOut() {
+        return this._isCheckedOut;
+    }
+
+    get ratings() {
+        return this._ratings;
+    }
+}
