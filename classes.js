@@ -23,6 +23,12 @@ class Nurse extends HospitalEmployee {
         super(name);
         this._certifications = certifications;
     }
+
+    // getter
+    get certifications() {
+        return this._certifications;
+    }
+
 }
 
 // create a nurse instance
