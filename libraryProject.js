@@ -60,3 +60,35 @@ console.log(newBook.getAverageRating());
 newBook.toggleCheckOutStatus();
 newBook.toggleCheckOutStatus();
 console.log(newBook._isCheckedOut);
+
+
+class Movie {
+    constructor(director, title, runtime) {
+        this._director = director;
+        this._title = title;
+        this._runtime = runtime;
+        this._isCheckedOut = false;
+        this._ratings = [];
+    }
+
+    // getters
+    get director() {
+        return this._director;
+    }
+
+    get title() {
+        return this._title;
+    }
+
+    get runtime() {
+        return this._runtime;
+    }
+
+    get isCheckedOut() {
+        return this._isCheckedOut;
+    }
+
+    get ratings() {
+        return this._ratings;
+    }
+}
