@@ -29,6 +29,10 @@ class Nurse extends HospitalEmployee {
         return this._certifications;
     }
 
+    // method to add certification
+    addCertification(newCertification) {
+        this._certifications.push(newCertification);
+    }
 }
 
 // create a nurse instance
