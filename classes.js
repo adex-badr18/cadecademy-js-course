@@ -40,6 +40,21 @@ class Nurse extends HospitalEmployee {
     }
 }
 
+class Doctor extends HospitalEmployee {
+    constructor(name, insurance) {
+        super(name);
+        this._insurance = insurance;
+    }
+
+    get insurance() {
+        return this._insurance;
+    }
+
+    addInsurance(newInsurance) {
+        this._insurance.push(newCertification);
+    }
+}
+
 // create a nurse instance
 const nurseOlynyk = new Nurse('Olynyk', ['Trauma', 'Pediatrics']);
 nurseOlynyk.takeVacationDays(5); // take 5 days vacation
