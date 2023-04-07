@@ -51,7 +51,7 @@ class Doctor extends HospitalEmployee {
     }
 
     addInsurance(newInsurance) {
-        this._insurance.push(newCertification);
+        this._insurance.push(newInsurance);
     }
 }
 
@@ -63,3 +63,11 @@ console.log(nurseOlynyk.remainingVacationDays); // get remaining vacation days
 // add new certification to nurseOlynyk
 nurseOlynyk.addCertification('Genetics');
 console.log(nurseOlynyk.certifications);
+
+// create a doctor instance
+const doctorJohn = new Doctor('John', ['Car Insurance', 'House Insurance']);
+doctorJohn.addInsurance('Health Insurance');
+doctorJohn.takeVacationDays(10);
+
+console.log(doctorJohn.remainingVacationDays);
+console.log(doctorJohn.insurance);
