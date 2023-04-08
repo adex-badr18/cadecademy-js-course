@@ -72,9 +72,21 @@ class HighSchool extends School {
     }
 }
 
-// Create an instance of PrimarySchool
+// Create an instance of PrimarySchool class
+console.log();
+console.log('******************PrimarySchool Instance******************');
+console.log();
 const lorraineHansburry = new PrimarySchool('Lorraine Hansburry', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.');
 lorraineHansburry.quickFacts();
 const substituteTeacher = School.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli']);
 console.log(substituteTeacher);
 console.log(lorraineHansburry.pickupPolicy);
+
+// create an instance of HighSchool class
+console.log();
+console.log('******************HighSchool Instance******************');
+console.log();
+const alSmith = new HighSchool('Al E. Smith', 415, ['Baseball', 'Basketball', 'Volleyball', 'Track and Field']);
+alSmith.sportsTeams;
+alSmith.addSportsTeam('Football');
+alSmith.sportsTeams;
