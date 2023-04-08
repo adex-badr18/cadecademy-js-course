@@ -1,9 +1,3 @@
-// School
-// Properties: name(string), level(one of three strings: 'primary', 'middle', or 'high'), and numberOfStudents(number)
-// Getters: all properties have getters
-// Setters: the numberOfStudents property has a setter
-// Methods: .quickFacts() and .pickSubstituteTeacher()(this is a static method)
-
 class School {
     constructor(name, level, numberOfStudents) {
         this._name = name;
@@ -21,10 +15,14 @@ class School {
     }
 
     get numberOfStudents() {
-        returnthis._numberOfStudents;
+        return this._numberOfStudents;
     }
 
     set numberOfStudents(studentCount) {
+        if (typeof studentCount !== 'number') {
+            console.log('Invalid input: numberOfStudents must be set to a Number.')
+        }
+
         this._numberOfStudents = studentCount;
     }
 
