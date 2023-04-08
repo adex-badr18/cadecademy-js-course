@@ -30,8 +30,9 @@ class School {
         console.log(`${this._name} educates ${this._numberOfStudents} at the ${this._level} school level.`)
     }
 
-    static pickSubstituteTeacher() {
-
+    static pickSubstituteTeacher(substituteTeachers) {
+        const randomIndex = Math.floor(Math.random() * substituteTeachers.length);
+        return substituteTeachers[randomIndex];
     }
 }
 
