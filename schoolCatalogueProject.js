@@ -36,7 +36,7 @@ class School {
     }
 }
 
-class Primary extends School {
+class PrimarySchool extends School {
     constructor(name, level, numberOfStudents, pickupPolicy) {
         super(name, level, numberOfStudents);
         this._pickupPolicy = pickupPolicy;
@@ -51,13 +51,13 @@ class Primary extends School {
     }
 }
 
-class Middle extends School {
+class MiddleSchool extends School {
     constructor(name, level, numberOfStudents) {
         super(name, level, numberOfStudents);
     }
 }
 
-class High extends School {
+class HighSchool extends School {
     constructor(name, level, numberOfStudents, sportsTeams) {
         super(name, level, numberOfStudents);
         this._sportsTeams = sportsTeams;
