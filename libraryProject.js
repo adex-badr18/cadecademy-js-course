@@ -119,7 +119,8 @@ class CD extends Media {
 
     // instance methods
     shuffle() {
-
+        // sorts the songs by randomly manipulating the sort order
+        return this._songs.sort(() => Math.floor(Math.random() * (1 - (-1) + 1)) + (-1));
     }
 }
 
@@ -133,3 +134,5 @@ newCD.toggleCheckOutStatus();
 console.log(newCD._isCheckedOut);
 
 console.log(newCD.songs);
+
+console.log(newCD.shuffle());
