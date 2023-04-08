@@ -36,3 +36,18 @@ class School {
 
     }
 }
+
+class Primary extends School {
+    constructor(name, level, numberOfStudents, pickupPolicy) {
+        super(name, level, numberOfStudents);
+        this._pickupPolicy = pickupPolicy;
+    }
+
+    get pickupPolicy() {
+        return this._pickupPolicy;
+    }
+
+    set pickupPolicy(pickupPolicy) {
+        this._pickupPolicy = pickupPolicy;
+    }
+}
