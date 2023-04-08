@@ -136,3 +136,9 @@ console.log(newCD._isCheckedOut);
 console.log(newCD.songs);
 
 console.log(newCD.shuffle());
+
+
+// Catalog class that holds all media items in the library
+// class Catalog {
+//     constructor() { }
+// }
